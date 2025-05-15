@@ -4,10 +4,10 @@
   "description": "Build the HTML template with tailwind css.",
   "type": "commonjs",
   "scripts": {
-    "start": "live-server ./public ",
-    "build": "postcss css/main.css -o public/assets/css/build/tailwind.css --minify",
+    "start": "node init && live-server ./public",
+    "build": "node init && postcss css/main.css -o public/assets/css/build/tailwind.css --minify",
     "tailwind": "tailwindcss  -i css/main.css -o public/assets/css/build/tailwind.css --minify  & live-server ./public ",
-    "dev": " live-server ./public & postcss css/main.css -o public/assets/css/build/tailwind.css --minify --watch  "
+    "dev": "node init && live-server ./public & postcss css/main.css -o public/assets/css/build/tailwind.css --minify --watch"
   },
   "keywords": [
     "HTML template",
